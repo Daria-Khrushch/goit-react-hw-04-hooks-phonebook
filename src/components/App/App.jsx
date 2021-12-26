@@ -55,9 +55,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(`App componentDidUp`);
     if (this.state.contacts !== prevState.contacts) {
-      console.log(`new`);
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
